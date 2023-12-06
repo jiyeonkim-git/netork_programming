@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}title of base html{% endblock %}</title>
+</head>
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/polls/">Select question</a></li>
+            <li><a href="/polls/1/results/">Result of question that has id value as 1</a></li>
+        </ul>
+        {% endblock%}
+    </div>
+
+    <div id="content">
+        {% block content %}
+        content of base.html!
+        {% endblock %}
+    </div>
+</body>
+</html>
