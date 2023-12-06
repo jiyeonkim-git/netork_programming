@@ -1,0 +1,14 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<h2>Onsil Django Tutorial</h2>
+<ul>
+    {% for app in apps %}
+        {% with app|add:':'|add:'index' as urlvar %}
+        <li>
+            <a href="{% url urlvar %}">{{ app }}</a>
+        </li>
+        {% endwith %}
+    {% endfor %}
+</ul>
+{% endblock %}
